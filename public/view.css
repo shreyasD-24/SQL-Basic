@@ -1,0 +1,10 @@
+table, tr, td, th{
+    border: 1px solid black;
+}
+
+body{
+    text-align: center;
+    background-image: url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+}
+

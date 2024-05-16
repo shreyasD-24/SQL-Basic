@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-size: cover;
+    }
+
+    form{
+        font-size:larger;
+    }
+</style>
+<body>
+    <h2>Username: &nbsp; &nbsp;  <%= user.username %></h2>
+    <h3>Email: &nbsp; &nbsp;  <%=user.email %></h3>
+    <form method="POST" action="/users/<%= user.id %>/delete?_method=DELETE">
+        <label for="password">Enter Password: &nbsp;</label>
+        <input name="password" placeholder="Enter your password" type="password"><br><br><br><br>
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>

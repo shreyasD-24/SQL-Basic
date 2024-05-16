@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Username</title>
+</head>
+<body style="text-align: center; background-image: url('https://images.pexels.com/photos/2333293/pexels-photo-2333293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover;">
+    <h3>You are now editing the Username for Email: <%= user[0].email %></h3>
+    <form method="POST" action="/users/<%=user[0].id%>/edit?_method=PATCH">
+        <style>
+            label{
+                margin-left: 7px;
+            }
+            input{
+                margin-bottom: 20px;
+                width: 400px;
+                border-radius: 30px;
+            }
+        </style>
+        <label for="username">Username:   </label>
+        <input id="username" name="username" placeholder="<%=user[0].username%>"> <br>
+        <label for="password">Password:  </label>
+        <input type="password" name="password" id="password" placeholder="Enter correct password"><br>
+        <button type="submit">Change Username</button>
+    </form>
+</body>
+</html>
